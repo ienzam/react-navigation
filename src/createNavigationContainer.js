@@ -17,7 +17,11 @@ function validateProps(props) {
     return;
   }
 
-  const { navigation, screenProps, ...containerProps } = props;
+  const navigation = props.navigation;
+  const screenProps = props.screenProps;
+  const containerProps = Object.assign({}, props);
+  delete containerProps.navigation;
+  delete containerProps.screenProps;
 
   const keys = Object.keys(containerProps);
 
