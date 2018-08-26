@@ -5,35 +5,19 @@ const RESET = 'Navigation/RESET';
 const REPLACE = 'Navigation/REPLACE';
 const COMPLETE_TRANSITION = 'Navigation/COMPLETE_TRANSITION';
 
-const pop = payload => ({
-  type: POP,
-  ...payload,
-});
+const pop = payload => Object.assign({}, {type: POP}, payload);
 
-const popToTop = payload => ({
-  type: POP_TO_TOP,
-  ...payload,
-});
+const popToTop = payload => Object.assign({}, {type: POP_TO_TOP}, payload);
 
-const push = payload => ({
-  type: PUSH,
-  ...payload,
-});
+const push = payload => Object.assign({}, {type: PUSH}, payload);
 
-const reset = payload => ({
-  type: RESET,
-  ...payload,
-});
 
-const replace = payload => ({
-  type: REPLACE,
-  ...payload,
-});
+const reset = payload => Object.assign({}, {type: RESET}, payload);
 
-const completeTransition = payload => ({
-  type: COMPLETE_TRANSITION,
-  ...payload,
-});
+
+const replace = payload => Object.assign({}, {type: REPLACE}, payload);
+
+const completeTransition = payload => Object.assign({}, {type: COMPLETE_TRANSITION}, payload);
 
 export default {
   POP,
